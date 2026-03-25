@@ -1,5 +1,6 @@
-# Pure Python / safe libraries
 hydrogram
+tgcrypto==1.2.5
+py-tgcalls==2.1.1
 yt-dlp
 youtube-search-python==1.6.6
 ffmpeg-python
@@ -10,7 +11,3 @@ dnspython
 psutil
 pillow
 requests
-
-# C-extensions, build from source for safety
-tgcrypto --no-binary :all:  # build from source to avoid illegal hardware instruction
-py-tgcalls --no-binary :all:  # same
