@@ -1,21 +1,16 @@
-# ---- Core ----
-aiofiles
-aiohttp
-dnspython==2.2.1
-ffmpeg-python
-psutil
-tgcrypto
-python-dotenv
-
-# ---- Telegram ----
-pyrogram
-py-tgcalls==0.9.7
-
-# ---- YouTube / Streaming ----
+# Pure Python / safe libraries
+hydrogram
 yt-dlp
 youtube-search-python==1.6.6
-httpx==0.24.1
-
-# ---- Optional ----
+ffmpeg-python
+aiohttp==3.11.11
+httpx
+aiofiles
+dnspython
+psutil
 pillow
 requests
+
+# C-extensions, build from source for safety
+tgcrypto --no-binary :all:  # build from source to avoid illegal hardware instruction
+py-tgcalls --no-binary :all:  # same
